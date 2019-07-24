@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>Git & Gitlab Intro -- N.Havers</title>
+
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/serif.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/monokai.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section data-markdown><textarea data-template>## Git Intro 2019</textarea></section>
+
+				<section>
+					<section data-markdown><textarea data-template>
+						### Today
+						![git img1](./pres1img/NoVCS.jpg)
+					</textarea></section>
+					<section data-markdown><textarea data-template>
+						**Issues**
+						* <!-- .element: class="fragment" data-fragment-index="1" -->
+						Inconsistent home
+						* <!-- .element: class="fragment" data-fragment-index="2" -->
+						What changed?
+						* <!-- .element: class="fragment" data-fragment-index="3" -->
+						Which is current? In PRD?
+						* <!-- .element: class="fragment" data-fragment-index="4" -->
+						How are we sharing?
+						* <!-- .element: class="fragment" data-fragment-index="5" -->
+						Can it be easier?
+
+					</textarea></section>
+				</section>
+
+
+
+				<section>
+
+						<section data-markdown><textarea datatemplate>
+							### Git Psuedo
+							![git img2](./pres1img/images/snapshots.png)
+
+						</textarea></section>
+						<section data-markdown><textarea datatemplate>
+								### Git Psuedo
+								![git img2](./pres1img/dvcs.png)
+
+							</textarea></section>
+						<section data-markdown><textarea datatemplate>
+							### Git Psuedo
+							![git img2](./pres1img/images/areas.png)
+							<aside class="notes">
+									Demo Client with sample create/add/commit
+									Maybe show terminal...
+									git init, add, commit,commit,commit
+							</aside>
+						</textarea></section>
+
+				</section>
+
+				<section data-markdown="">
+					<!-- <textarea data-template> -->
+
+						<script type="text/template">
+							### **Benefits**
+							1. <!-- .element: class="fragment" data-fragment-index="1" -->
+							Everyone has (_can_ _have_) a local copy.
+							2. <!-- .element: class="fragment" data-fragment-index="2" -->
+							Fast, only need overhead when "**Done**".
+							3. <!-- .element: class="fragment" data-fragment-index="3" -->
+							Time travel is possible.
+							4. <!-- .element: class="fragment" data-fragment-index="4" -->
+							Sync and share repos are easy.
+						</script>
+					<!-- </textarea> -->
+				</section>
+				<section data-markdown="">
+					<textarea data-template>
+						### Basic Git workflow:
+						> * You **modify** files in your working tree.
+						> * You selectively **stage** just those changes you want to be part of your next commit, which adds only those changes to the staging area.
+						> * You save via **commit**, which takes the files as they are in the staging area and stores that snapshot permanently to your Git directory
+						<aside class="notes">
+							Github desktop demo
+							Walkthrough init, add, stage, commit
+						</aside>
+					</textarea>
+				</section>
+				<section data-markdown="">
+					<textarea data-template>
+						### Branches
+						Master == PRD
+						![gitBranch](./pres1img/gitbranch.svg)
+
+						<aside class="notes">
+							DEMO
+							Github desktop
+							Create branch, delete, merge, checkout
+						</aside>
+					</textarea>
+				</section>
+				<section data-markdown="">
+					<textarea data-template>
+						![gitBranch](./pres1img/gitcomplex.svg)
+
+
+					</textarea>
+				</section>
+				<section data-markdown="">
+					<textarea data-template>
+						### Still local?
+						Need a remote!
+						
+						![git img2](./pres1img/GitlabHL.png)
+
+						<aside class="notes">
+							Project vs Repo.
+							Git push/pull
+						</aside>
+					</textarea>
+				</section>
+				<!-- <section data-markdown=""><textarea data-template="">
+					* Item 1 .element: class="fragment" data-fragment-index="1"
+					* Item 2 .element: class="fragment" data-fragment-index="2"
+				</textarea></section> -->
+			</div>
+		</div>
+
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info about config & dependencies:
+			// - https://github.com/hakimel/reveal.js#configuration
+			// - https://github.com/hakimel/reveal.js#dependencies
+			Reveal.initialize({
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true },
+					// Zoom in and out with Alt+click
+					{ src: 'plugin/zoom-js/zoom.js', async: true }
+				],
+				// Transition style
+				transition: 'fade', // none/fade/slide/convex/concave/zoom
+			});
+		</script>
+	</body>
+</html>
